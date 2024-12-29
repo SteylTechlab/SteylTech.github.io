@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body style="background-image: url(images/background.jpg)">
+    <div class="containera">
+        <header>
+            <h1>Wasiliana Nasi</h1>
+            <p>Ikiwa una maswali au maoni, tafadhali tuandikie kwa kutumia fomu iliyo hapa chini.<br>
+            Pia unaweza kupiga simu moja kwa moja kupitia nambari za simu hapo chini au kutuma ujumbe mfupi <br>kweny whatsapp yetu kwa kubonyeza kitufe cha wahtsapp hapo chini</p>
+        </header>
+        <form id="contactForm">
+            <div class="form">
+                <div class="right">
+                    <div class="contact-form">
+                        <input type="text" id="fullName" required>
+                        <label for="fullName">Full Name</label>
+                    </div>
+
+                    <div class="contact-form">
+                        <input type="email" id="email" required>
+                        <label for="email">E-mail Id</label>
+                    </div>
+
+                    <div class="contact-form">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Type your Message....</label>
+                    </div>
+
+                    <div class="contact-form">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+        <!-- Section to display submitted data -->
+        <div id="submittedData" style="display:none;">
+            <h2>Your Submitted Information</h2>
+            <p><strong>Full Name:</strong> <span id="submittedFullName"></span></p>
+            <p><strong>Email:</strong> <span id="submittedEmail"></span></p>
+            <p><strong>Message:</strong> <span id="submittedMessage"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and display data
+        const contactForm = document.getElementById('contactForm');
+        const submittedDataSection = document.getElementById('submittedData');
+
+        // Event listener for form submission
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page refresh
+
+            // Get the values of the form inputs
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Display the submitted data in the section below the form
+            document.getElementById('submittedFullName').textContent = fullName;
+            document.getElementById('submittedEmail').textContent = email;
+            document.getElementById('submittedMessage').textContent = message;
+
+            // Show the submitted data section
+            submittedDataSection.style.display = 'block';
+
+            // Optionally, reset the form
+            contactForm.reset();
+        });
+    </script>
+        <div class="contenti">
+            <div class="contenti-form">
+                <section>
+                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                    <h2>address</h2>
+                    <p>
+                    SONGWE <br>
+                        TUNDUMA Tz <br>
+    
+                    </p>
+                </section>
+
+                <section>
+                    <li>
+                        <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                        <h2>Phone</h2>
+                        <p><a href="tel:+255628589362">+255 628 589 362</a></p>
+                    </li>
+                    
+                </section>
+
+                <section>
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    <h2>E-mail</h2>
+                    <p>SamFurniture@gmail.com</p>
+                </section>
+            </div>
+        </div>
+
+      
+        <div class="media">
+            <li>
+                <a href="https://wa.me/+255763554722" target="_blank">
+                    <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        </div>
+        <div class="empty">
+
+        </div>
+    </div>    
+</body>
+</html>
